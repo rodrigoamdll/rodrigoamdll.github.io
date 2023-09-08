@@ -1,81 +1,155 @@
-/*Estilos basicos de la pagina*/
 /* Estilos generales */
+@import url(https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@10..48,200&family=Courgette&family=Dancing+Script:wght@600&family=Passion+One&display=swap);
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: lavender;
 }
 
 header {
-    background-color: #333;
+    background-color: navy;
     color: white;
     text-align: center;
     padding: 20px 0;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    height: 64px;
+    width: 64px;
+}
+
+header h1 {
+    font-family: 'Acme', sans-serif;
+    font-size: 50px;
+    margin-left: 10px;
+}
+
+nav {
+    width: 100%; /*960/960*=100%*/
+    font-size: 1.2em;
+    padding-top: 10px;
+    background-color:white;
+    height: 34px;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
+    list-style: none;
+    margin: 0px 0px 65px 0px;
+    padding: 0; /* Elimina el relleno predeterminado */
+    background-color:white;
 }
 
-nav li {
-    display: inline;
-    margin-right: 20px;
+nav ul li {
+    float: left;
+    margin: 0px;
+    background-color: white;
 }
 
-nav a {
+nav ul li a {
     text-decoration: none;
-    color: #333;
+    padding: .3em .5em;
+    margin: 0em .5em;
+    display: block;
+    color: navy;
     font-weight: bold;
+    transition: color 1s, transform 1.7s;
+    background-color: white;
 }
+
+nav ul li a:hover {
+    color: navy;
+    transform: scale(1.1);
+}
+
+nav ul li a#cartelera1 {
+    background: url(../img/icons/clapperboard.png) no-repeat 0px 3px;
+    padding-left: 40px;
+}
+
+nav ul li a#estrenos1 {
+    background: url(../img/icons/next.png) no-repeat 0px 3px;
+    padding-left: 40px;
+
+}
+
+nav ul li a#promociones1 {
+    background: url(../img/icons/marketing.png) no-repeat 0px 3px;
+    padding-left: 40px;
+}
+
+nav ul li a#dulceria1 {
+    background: url(../img/icons/candy.png) no-repeat 0px 3px;
+    padding-left: 40px;
+}
+
 
 section {
     margin: 20px;
 }
 
+#cartelera {
+    background-color: lavender;
+}
 
+#cartelera h2{
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    color: navy;
+}
+
+#pelicula_en_cartelera  h2{
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    color: navy;
+}
+
+#proximo-estrenos h2{
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    color: navy;
+}
+
+#promociones h2{
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    color: navy;
+}
+
+#dulceria h2{
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    color: navy;
+}
 
 /* Estilos para la sección de películas en cartelera */
 .peliculacar {
     margin-bottom: 20px;
     border: 1px solid #ddd;
     padding: 10px;
+    background-color: white;
 }
 
+#generos button {
+    margin-top: 10px;
+    border: none;
+    box-sizing: border-box;
+    background-color: #091dab;
+    color: #ffffff;
+    font-size: 14px;
+    border-radius: 15px;
+    height: 25px;
+}
 
 /* Estilos para el pie de página */
 footer {
-    background-color: #333;
+    background-color: navy;
     color: white;
     text-align: center;
     padding: 10px 0;
-}
-
-/* Diseño Responsivo */
-@media (max-width: 768px) {
-    /* Estilos para tablets y smartphones */
-    header {
-        padding: 10px 0;
-    }
-
-    nav ul {
-        text-align: center;
-    }
-
-    nav li {
-        display: block;
-        margin: 10px 0;
-    }
-
-   
-    /* Estilos para las películas en dispositivos pequeños */
-    .pelicula {
-        padding: 10px;
-    }
-
-    iframe {
-        height: auto;
-    }
 }
 
 /* Estilos para la sección de cartelera */
@@ -88,6 +162,7 @@ footer {
     margin-bottom: 20px;
     border: 1px solid #ddd;
     padding: 20px;
+    background-color: white;
 }
 
 .pelicula img {
@@ -111,12 +186,26 @@ iframe {
     text-align: center;
     vertical-align: top;
     width: 250px; /* Ajusta el ancho según sea necesario */
+    height: 490px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     padding: 10px;
+    background-color: white;
 }
 
+.proximo-estrenos h4 {
+    background-color: navy;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
 .proximo-estrenos img {
     max-width: 100%;
-    height: auto;
+    height: 390px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Cine XYZ</title>
-    <link rel="stylesheet" type="text/css" href="estilobase.css">
+    <link rel="stylesheet" type="text/css" href="css/estilobase.css">
 </head>
 <body>
     <header>
-        <h1>Cine XYZ</h1>
+        <img src="img/icons/film.png" alt="logo-cine">
+        <h1>Cineflex</h1>
     </header>
     
     <nav>
         <ul>
-            <li><a href="#cartelera">Cartelera</a></li>
-            <li><a href="#proximo-estrenos">Próximos Estrenos</a></li>
-            <li><a href="#promociones">Promociones</a></li>
-            <li><a href="#dulceria">Dulcería</a></li>
+            <li><a href="#cartelera" id="cartelera1">Cartelera</a></li>
+            <li><a href="#proximo-estrenos" id="estrenos1">Próximos Estrenos</a></li>
+            <li><a href="#promociones" id="promociones1">Promociones</a></li>
+            <li><a href="#dulceria" id="dulceria1">Dulcería</a></li>
         </ul>
     </nav>
     
@@ -46,7 +47,7 @@
 
        <!-- Película 4 -->
        <div class="pelicula">
-        <img src="img/pelicula4_meg2.jpg">
+        <img src="img/pelicula4.jpg">
         <p>Megalodon 2</p>
         <a href="#pelicula4">Más información</a>
        </div>
@@ -60,7 +61,12 @@
         <div class="peliculacar" id="pelicula1">
             <h3>Blue Beetle</h3>
             <iframe width="560" height="315" src="https://www.youtube.com/watch?v=-PEODBVHCgU" frameborder="0" allowfullscreen></iframe>
-            <p>Género: Acción, Aventura, Ciencia Ficción, Superhéroes</p>
+            <div id="generos">
+                <button> Acción </button>
+                <button> Aventura </button>
+                <button> Ciencia Ficción </button>
+                <button> Superhéroes </button>
+            </div>
             <p>Director: Angel Soto</p>
             <p>Sinopsis: Jaime Reyes, recien graduado de la universidad, busca encontrar su proposito en el mundo, 
                 el destino interviene cuando Jaime inesperadamente 
@@ -72,7 +78,11 @@
         <div class="peliculacar" id="pelicula2">
             <h3>Gran Turismo</h3>
             <iframe width="560" height="315" src="https://www.youtube.com/watch?v=3JN0efm2nHg" frameborder="0" allowfullscreen></iframe>
-            <p>Género: Deportes, Drama, Acción</p>
+            <div id="generos">
+                <button> Deportes </button>
+                <button> Drama </button>
+                <button> Acción </button>
+            </div>
             <p>Director: Neill Blomkamp</p>
             <p>Sinopsis: Basada en la historia real de Jann Mardenborough, narra como se cumple el deseo mas grande de un adolescente 
                 jugador de Gran Turismo cuyas habilidades hacen que gane una serie de competencias de Nissan para convertirse en un 
@@ -84,7 +94,9 @@
         <div class="peliculacar" id="pelicula3">
             <h3>Sonido de Libertad</h3>
             <iframe width="560" height="315" src="https://www.youtube.com/watch?v=nIZM0oVl4Gw" frameborder="0" allowfullscreen></iframe>
-            <p>Género: Acción</p>
+            <div id="generos">
+                <button> Acción </button>
+            </div>
             <p>Director: Alejandro Monteverde</p>
             <p>Sinopsis: La increible historia real de un ex agente del gobierno de EEUU convertido en justiciero que se embarca 
                 en una peligrosa mision para rescatar a cientos de ninios de los traficantes sexuales.</p>
@@ -95,7 +107,10 @@
         <div class="peliculacar" id="pelicula4">
             <h3>Megalodon 2</h3>
             <iframe width="560" height="315" src="https://www.youtube.com/watch?v=e6mJF-uDXYE" frameborder="0" allowfullscreen></iframe>
-            <p>Género: Terror, Ciencia Ficción</p>
+            <div id="generos">
+                <button> Terro </button>
+                <button> Ciencia Ficción </button>
+            </div>
             <p>Director: Ben Wheatley</p>
             <p>Sinopsis: Un equipo de investigación inicia una misión que va a explorar las profundidades más abismales del mar. 
                 Pero su viaje se convierte en caos cuando un malévolo operativo minero amenaza su misión y los obliga a librar
@@ -111,47 +126,54 @@
     <section id="proximo-estrenos">
         <h2>Próximos Estrenos</h2>
         <div class="proximo-estrenos">
-            <img src="img/peliculaprox1_sx.jpg">
+            <img src="img/estreno.jpg">
+            <h4>Estreno</h4>
             <p>Saw X</p>
             <p>Fecha de estreno: 28 sep 2023</p>
            </div>
         <div class="proximo-estrenos">
             <img src="img/peliculaprox2_pptmm.jpg">
+            <h4>Estreno</h4>
             <p>Paw Patrol The Mighty Movie</p>
             <p>Fecha de estreno: 29 sep 2023</p>
            </div>
         <div class="proximo-estrenos">
             <img src="img/peliculaprox3_cev.jpg">
+            <h4>Estreno</h4>
             <p>Cacería en Venecia</p>
             <p>Fecha de estreno: 14 sep 2023</p>
            </div>
         <div class="proximo-estrenos">
             <img src="img/peliculaprox4_aps.jpg">
+            <h4>Estreno</h4>
             <p>After para siempre</p>
             <p>Fecha de estreno: 14 sep 2023</p>
            </div>
            <div class="proximo-estrenos">
             <img src="img/peliculaprox5_cr.jpg">
+            <h4>Estreno</h4>
             <p>Contrarreloj</p>
             <p>Fecha de estreno: 14 sep 2023</p>
            </div>
     </section>
+
+    <div class="container">
+        <section id="promociones">
+            <h2>Promociones</h2>
+            <img src="img/img_promo1.jpg" style="width: 500px; height: 300px;">
+        </section>
+        
+        <section id="dulceria">
+            <h2>Dulcería</h2>
+            <img src="img/img_dulce1.jpg" style="width: 500px; height: 300px;">
+        </section>
+    </div>
     
-    <section id="promociones">
-        <h2>Promociones</h2>
-        <img src="img/img_promo1.jpg">
-    </section>
-    
-    <section id="dulceria">
-        <h2>Dulcería</h2>
-        <img src="img/img_dulce1.jpg">
-    </section>
     
     <footer>
-        <p>&copy; 2023 Cine XYZ</p>
+        <p>&copy; 2023 Cineflex</p>
     </footer>
 </body>
 </html>
-
 
 
