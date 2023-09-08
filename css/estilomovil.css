@@ -33,16 +33,20 @@ nav {
     font-size: 1.2em;
     padding-top: 10px;
     background-color:white;
-    height: 34px;
+    height: auto;
+}
+
+nav ul {
+    margin: 0px;
+    background-color: white;
 }
 
 nav ul {
     list-style: none;
-    margin: 0px 0px 65px 0px;
-    padding: 0; /* Elimina el relleno predeterminado */
-    background-color:white;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
-
 nav ul li {
     float: left;
     margin: 0px;
@@ -96,13 +100,13 @@ section {
 }
 
 #cartelera .pelicula {
-    width: 40%;
+    width: 87%;
     border-radius: 15px;
 }
 
 
 #proximo-estrenos .proximo-estrenos {
-    width: 44%;
+    width: 90%;
     border-radius: 15px;
 }
 
@@ -142,6 +146,7 @@ section {
 
 /* Estilos para la sección de películas en cartelera */
 .peliculacar {
+    width: 90%;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     padding: 10px;
@@ -221,12 +226,26 @@ iframe {
 }
 
 #dulceria {
-    width: 90%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#promociones {
+    width: 100%;
     overflow: hidden;
 }
 
 
-#promociones {
-    width: 90%;
-    overflow: hidden;
+#promociones img,
+#dulceria img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+
+/* Estilos para el modo smartphone (una columna) */
+.pelicula {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Espacio entre las películas */
 }

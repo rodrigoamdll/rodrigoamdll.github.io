@@ -101,6 +101,16 @@ section {
     color: navy;
 }
 
+#cartelera .pelicula {
+    border-radius: 15px;
+}
+
+
+#proximo-estrenos .proximo-estrenos {
+    border-radius: 15px;
+}
+
+
 #pelicula_en_cartelera  h2{
     font-family: 'Acme', sans-serif;
     font-size: 30px;
@@ -127,10 +137,12 @@ section {
 
 /* Estilos para la sección de películas en cartelera */
 .peliculacar {
+    width: 85%;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     padding: 10px;
     background-color: white;
+    border-radius: 15px;
 }
 
 #generos button {
