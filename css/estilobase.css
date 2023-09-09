@@ -209,3 +209,27 @@ iframe {
     justify-content: space-between;
     align-items: center;
 }
+
+.video-thumbnail {
+    position: relative;
+    display: inline-block;
+}
+
+.video-thumbnail img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para el icono de play */
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: #fff;
+    background-color: rgba(131, 125, 125, 0.584);
+}
+
+
+
