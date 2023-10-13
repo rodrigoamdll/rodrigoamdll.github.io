@@ -88,10 +88,6 @@ nav ul li a#promociones1 {
     padding-left: 40px;
 }
 
-nav ul li a#dulceria1 {
-    background: url(../img/icons/candy.png) no-repeat 0px 3px;
-    padding-left: 40px;
-}
 
 section {
     margin: 20px;
@@ -171,12 +167,31 @@ iframe {
 }
 
 .peliculacar {
-    width: 85%;
+    display: inline-block;
+    margin-right: 30px;
+    text-align: center;
+    vertical-align: top;
+    width: 410px; /* Ajusta el ancho según sea necesario */
+    height: 720px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     padding: 10px;
     background-color: white;
     border-radius: 15px;
+}
+
+.peliculacar h3 {
+    line-height: 0.2; /* Ajusta el valor según tu preferencia para la altura del h3 */
+    margin-top: 10px; /* Añade espacio entre el h3 y el borde superior del contenedor */
+}
+
+
+
+.contenedor-peliscart-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #generos button {
@@ -275,11 +290,6 @@ iframe {
     color: navy;
 }
 
-#dulceria h2{
-    font-family: 'Acme', sans-serif;
-    font-size: 30px;
-    color: navy;
-}
 
 
 /* Estilos para el pie de página */
@@ -295,3 +305,48 @@ footer {
     justify-content: space-between;
     align-items: center;
 }
+
+.slider-container {
+    width: 700px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    animation: slide 15s infinite;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+@keyframes slide {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    45% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    70% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(0);
+    }
+}
+

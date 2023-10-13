@@ -21,7 +21,6 @@
             <li><a href="#cartelera" id="cartelera1">Cartelera</a></li>
             <li><a href="#proximo-estrenos" id="estrenos1">Próximos Estrenos</a></li>
             <li><a href="#promociones" id="promociones1">Promociones</a></li>
-            <li><a href="#dulceria" id="dulceria1">Dulcería</a></li>
         </ul>
     </nav>
     
@@ -68,7 +67,8 @@
         <h2>Películas en Cartelera</h2>
         <!-- Para cada película en cartelera, puedes crear un bloque de información -->
         <div class="contenedor-peliscart">
-            <div class="peliculacar" id="pelicula1">
+            <div class="contenedor-peliscart contenedor-peliscart-row">
+                <div class="peliculacar" id="pelicula1">
                 <h3>Blue Beetle</h3>
                 <div class="video-thumbnail">
                     <a href="https://www.youtube.com/watch?v=swtFJ2GNzhk" target="_blank">
@@ -154,6 +154,51 @@
                 <p>Precio de Entradas: $3.00</p>
                 <p>Horarios: Lunes-Miercoles / 11:30 - 19:30 | Martes-Jueves / 11:45 - 20:45 | Sábado-Domingo / 11:00 - 23:30</p>
             </div>
+
+            <div class="peliculacar" id="pelicula5">
+                <h3>Taylor Swift The Eras Tour</h3>
+                <div class="video-thumbnail">
+                    <a href="https://www.youtube.com/watch?v=KudedLV0tP0" target="_blank">
+                    <div class="play-icon">&#9658;</div> <!-- Icono de play -->
+                    <img src="https://i.ytimg.com/vi/KudedLV0tP0/hq720.jpg" alt="Miniatura del Video">
+                    </a>
+                </div>
+                <div id="generos">
+                    <button> Musical </button>
+                </div>
+                <p>Director: Sam Wrench</p>
+                <p>Sinopsis: ¡El fenómeno cultural continúa en la pantalla grande! Sumérgete en esta experiencia 
+                    cinematográfica de este concierto único en la vida. Podrás disfrutarlo con una vista impresionante 
+                    de la gira histórica desde la pantalla grande. ¡Se recomienda usar la vestimenta de Taylor Swift Eras 
+                    y tus friendship bracelets!</p>
+                <p>Elenco: Taylor</p>
+                <p>Precio de Entradas: $4.00</p>
+                <p>Horarios: Lunes-Miercoles / 11:30 - 19:30 | Martes-Jueves / 11:45 - 20:45 | Sábado-Domingo / 11:00 - 23:30</p>
+            </div>
+
+            <div class="peliculacar" id="pelicula6">
+                <h3>Evil Dead El Despertar</h3>
+                <div class="video-thumbnail">
+                    <a href="https://www.youtube.com/watch?v=keW_fKq187k" target="_blank">
+                    <div class="play-icon">&#9658;</div> <!-- Icono de play -->
+                    <img src="https://i.ytimg.com/vi/keW_fKq187k/hq720.jpg" alt="Miniatura del Video">
+                    </a>
+                </div>
+                <div id="generos">
+                    <button> Terror </button>
+                    <button> Fantasía </button>
+                </div>
+                <p>Director: Lee Cronin</p>
+                <p>Sinopsis: En un edificio de apartamentos de Los Ángeles, dos hermanas luchan contra los demonios sedientos 
+                    de sangre que han salido de un libro antiguo.</p>
+                <p>Elenco: Moran Davles, Alyssa Sutherland, Lily Sullivan</p>
+                <p>Precio de Entradas: $3.00</p>
+                <p>Horarios: Lunes-Miercoles / 11:30 - 19:30 | Martes-Jueves / 11:45 - 20:45 | Sábado-Domingo / 11:00 - 23:30</p>
+            </div>
+
+
+            </div>
+            </div>
         </div>
     </section>
     
@@ -202,13 +247,13 @@
 
     <div id="bottom-info">
         <section id="promociones">
-            <h2>Promociones</h2>
-            <img src="img/img_promo1.jpg" style="width: 500px; height: 300px;">
-        </section>
-        
-        <section id="dulceria">
-            <h2>Dulcería</h2>
-            <img src="img/img_dulce1.jpg" style="width: 500px; height: 300px;">
+            <h2>Promociones Y Dulcería</h2>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide"><img src="img/img_promo1.jpg" alt="Imagen 1"></div>
+                    <div class="slide"><img src="img/img_dulce1.jpg" alt="Imagen 2"></div>
+                    <div class="slide"><img src="img/img_promo2.jpg" alt="Imagen 3"></div>
+                </div>
         </section>
     </div>
     
