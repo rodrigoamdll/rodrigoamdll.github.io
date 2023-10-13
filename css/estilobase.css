@@ -1,5 +1,9 @@
 /* Estilos generales */
 @import url(https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@10..48,200&family=Courgette&family=Dancing+Script:wght@600&family=Passion+One&display=swap);
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -33,7 +37,7 @@ nav {
     font-size: 1.2em;
     padding-top: 10px;
     background-color:white;
-    height: 34px;
+    height: 35px;
 }
 
 nav ul {
@@ -41,6 +45,9 @@ nav ul {
     margin: 0px 0px 65px 0px;
     padding: 0; /* Elimina el relleno predeterminado */
     background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 nav ul li {
@@ -86,85 +93,37 @@ nav ul li a#dulceria1 {
     padding-left: 40px;
 }
 
-
 section {
     margin: 20px;
 }
 
+/* Estilos para la sección de cartelera */
 #cartelera {
     background-color: lavender;
+    align-items: center;
 }
 
 #cartelera h2{
     font-family: 'Acme', sans-serif;
     font-size: 30px;
     color: navy;
+    
 }
 
 #cartelera .pelicula {
     border-radius: 15px;
 }
 
-
-#proximo-estrenos .proximo-estrenos {
-    border-radius: 15px;
+.contenedor-info{
+    padding-left: 7%;
 }
 
-
-#pelicula_en_cartelera  h2{
-    font-family: 'Acme', sans-serif;
-    font-size: 30px;
-    color: navy;
+.contenedor-peliculas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#proximo-estrenos h2{
-    font-family: 'Acme', sans-serif;
-    font-size: 30px;
-    color: navy;
-}
-
-#promociones h2{
-    font-family: 'Acme', sans-serif;
-    font-size: 30px;
-    color: navy;
-}
-
-#dulceria h2{
-    font-family: 'Acme', sans-serif;
-    font-size: 30px;
-    color: navy;
-}
-
-/* Estilos para la sección de películas en cartelera */
-.peliculacar {
-    width: 85%;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    background-color: white;
-    border-radius: 15px;
-}
-
-#generos button {
-    margin-top: 10px;
-    border: none;
-    box-sizing: border-box;
-    background-color: #091dab;
-    color: #ffffff;
-    font-size: 14px;
-    border-radius: 15px;
-    height: 25px;
-}
-
-/* Estilos para el pie de página */
-footer {
-    background-color: navy;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-/* Estilos para la sección de cartelera */
 .pelicula {
     display: inline-block;
     margin-right: 20px;
@@ -191,35 +150,44 @@ iframe {
     height: 315px;
 }
 
-/* Estilos para la sección de proximos-estrenos */
-.proximo-estrenos{
-    display: inline-block;
-    margin-right: 10px;
-    text-align: center;
-    vertical-align: top;
-    width: 250px; /* Ajusta el ancho según sea necesario */
-    height: 490px;
+/* Estilos para la sección de películas en cartelera */
+#pelicula_en_cartelera{
+    display: flex;
+    flex-direction: column;
+}
+
+#pelicula_en_cartelera  h2{
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    color: navy;
+    padding-left: 7%;
+}
+
+.contenedor-peliscart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.peliculacar {
+    width: 85%;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     padding: 10px;
     background-color: white;
+    border-radius: 15px;
 }
 
-.proximo-estrenos h4 {
-    background-color: navy;
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-.proximo-estrenos img {
-    max-width: 100%;
-    height: 390px;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#generos button {
+    margin-top: 10px;
+    border: none;
+    box-sizing: border-box;
+    background-color: #091dab;
+    color: #ffffff;
+    font-size: 14px;
+    border-radius: 15px;
+    height: 25px;
 }
 
 .video-thumbnail {
@@ -243,5 +211,87 @@ iframe {
     background-color: rgba(131, 125, 125, 0.584);
 }
 
+/* Estilos para la sección de estrenos*/
+#proximo-estrenos{
+    display: flex;
+    flex-direction: column;
+}
+
+.estrenos-info{
+    padding-left: 7%;
+}
+
+#proximo-estrenos h2{
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    color: navy;
+}
+
+#proximo-estrenos .proximo-estrenos{
+    border-radius: 15px;
+}
+
+.contenedor-estrenos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.proximo-estrenos{
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+    vertical-align: top;
+    width: 250px; /* Ajusta el ancho según sea necesario */
+    height: 500px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: white;
+}
+
+.proximo-estrenos h4 {
+    background-color: navy;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.proximo-estrenos img {
+    max-width: 100%;
+    height: 390px;
+}
+/* Estilos para la sección de dulceria y promociones */
+#bottom-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#promociones h2{
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    color: navy;
+}
+
+#dulceria h2{
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    color: navy;
+}
 
 
+/* Estilos para el pie de página */
+footer {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
