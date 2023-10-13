@@ -34,11 +34,17 @@ nav {
     padding-top: 10px;
     background-color:white;
     height: auto;
+    display: flex;
+    justify-content: flex-start;
 }
 
 nav ul {
     margin: 0px;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 nav ul {
@@ -95,23 +101,9 @@ section {
     margin: 20px;
 }
 
+/*Estilos para la seccion cartelera*/
 #cartelera {
     background-color: lavender;
-}
-
-#cartelera .pelicula {
-    width: 87%;
-    border-radius: 15px;
-}
-
-
-#proximo-estrenos .proximo-estrenos {
-    width: 90%;
-    border-radius: 15px;
-}
-
-#proximo-estrenos .proximo-estrenos  img {
-    width: 317px;
 }
 
 #cartelera h2{
@@ -120,60 +112,23 @@ section {
     color: navy;
 }
 
-#pelicula_en_cartelera  h2{
-    font-family: 'Acme', sans-serif;
-    font-size: 30px;
-    color: navy;
+.contenedor-peliculas{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }
 
-#proximo-estrenos h2{
-    font-family: 'Acme', sans-serif;
-    font-size: 30px;
-    color: navy;
-}
-
-#promociones h2{
-    font-family: 'Acme', sans-serif;
-    font-size: 30px;
-    color: navy;
-}
-
-#dulceria h2{
-    font-family: 'Acme', sans-serif;
-    font-size: 30px;
-    color: navy;
-}
-
-/* Estilos para la sección de películas en cartelera */
-.peliculacar {
+#cartelera .pelicula {
     width: 90%;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    background-color: white;
     border-radius: 15px;
 }
-
-#generos button {
-    margin-top: 10px;
-    border: none;
+.pelicula {
+    width: 100%;
     box-sizing: border-box;
-    background-color: #091dab;
-    color: #ffffff;
-    font-size: 14px;
-    border-radius: 15px;
-    height: 25px;
+    margin-bottom: 20px; /* Espacio entre las películas */
 }
 
-/* Estilos para el pie de página */
-footer {
-    background-color: navy;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-/* Estilos para la sección de cartelera */
 .pelicula {
     display: inline-block;
     margin-right: 20px;
@@ -200,7 +155,34 @@ iframe {
     height: 315px;
 }
 
-/* Estilos para la sección de proximos-estrenos */
+/*Estilos para la seccion peliculas en cartelera*/
+#pelicula_en_cartelera  h2{
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    color: navy;
+}
+
+.peliculacar {
+    width: 95%;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+#generos button {
+    margin-top: 10px;
+    border: none;
+    box-sizing: border-box;
+    background-color: #091dab;
+    color: #ffffff;
+    font-size: 14px;
+    border-radius: 15px;
+    height: 25px;
+}
+
+/*Estilos para la seccion estrenos*/
 .proximo-estrenos{
     display: inline-block;
     margin-right: 10px;
@@ -225,13 +207,56 @@ iframe {
     height: 390px;
 }
 
+#proximo-estrenos h2{
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    color: navy;
+}
+
+.contenedor-estrenos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#proximo-estrenos .proximo-estrenos {
+    width: 95%;
+    border-radius: 15px;
+    height: 25%;
+}
+
+#proximo-estrenos .proximo-estrenos  img {
+    width: 317px;
+}
+
+/* Estilos para la sección de dulceria y promociones */
+#bottom-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#promociones h2{
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    color: navy;
+}
+
+#dulceria h2{
+    font-family: 'Acme', sans-serif;
+    font-size: 30px;
+    color: navy;
+}
+
 #dulceria {
-    width: 80%;
+    width: 90%;
     overflow: hidden;
 }
 
 #promociones {
-    width: 80%;
+    width: 90%;
     overflow: hidden;
 }
 
@@ -242,10 +267,12 @@ iframe {
     height: auto; 
 }
 
-
-/* Estilos para el modo smartphone (una columna) */
-.pelicula {
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 20px; /* Espacio entre las películas */
+/* Estilos para el pie de página */
+footer {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
 }
+
+
