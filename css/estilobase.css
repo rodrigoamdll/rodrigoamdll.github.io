@@ -185,7 +185,9 @@ iframe {
     margin-top: 10px; /* Añade espacio entre el h3 y el borde superior del contenedor */
 }
 
-
+.peliculacar p{
+    text-align: justify;
+}
 
 .contenedor-peliscart-row {
     display: flex;
@@ -225,6 +227,46 @@ iframe {
     color: #fff;
     background-color: rgba(131, 125, 125, 0.584);
 }
+
+.compra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.boton-redondeado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+    border-radius: 20px; 
+    background-color: #7c00ba; 
+    color: #fff; 
+    padding: 10px 20px;
+    cursor: pointer;
+    height: 40px;
+}
+
+.boton-redondeado:hover {
+    background-color: #fff; 
+    color: #7c00ba;
+    border-color: #7c00ba; 
+    border-width: 2px;
+    border-style: solid;
+}
+
+.boton-redondeado:hover img{
+    content: url(../img/icons/grocery-store-active.png);
+}
+.boton-redondeado img {
+    display: block;
+    margin-right: 10px; 
+    width: 24px;
+    height: 24px;
+}
+
 
 /* Estilos para la sección de estrenos*/
 #proximo-estrenos{
