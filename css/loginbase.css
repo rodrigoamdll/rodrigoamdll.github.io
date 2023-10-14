@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@10..48,200&family=Courgette&family=Dancing+Script:wght@600&family=Passion+One&display=swap);
+body{
+    font-family: 'Acme', sans-serif;
+    background: lavender;
+}
+
+.box-area{
+    width: 930px;
+}
+
+.right-box{
+    padding: 40px 30px 40px 30px;
+}
+
+::placeholder{
+    font-size: 16px;
+}
+.rounded-4{
+    border-radius: 20px;
+}
+.rounded-5{
+    border-radius: 30px;
+}
+
+@media only screen and (max-width: 767px){
+     .box-area{
+        margin: 0 10px;
+     }
+     .left-box{
+        height: 100px;
+        overflow: hidden;
+     }
+     .right-box{
+        padding: 20px;
+     }
+}
