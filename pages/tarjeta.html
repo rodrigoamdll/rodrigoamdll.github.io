@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Pago en linea</title>
+    <link type="text/css" rel="stylesheet" href="../css/estilobase.css">
+    <link type="text/css" rel="stylesheet" href="../css/estilomovil.css" media="screen and (max-width:480px)">
+    <link type="text/css" rel="stylesheet" href="../css/estilotablet.css" media="screen and (min-width:481px) and (max-width:768px)">
+    <link type="text/css" rel="stylesheet" href="../css/estilobase.css" media="screen and (min-width:769px)">
+</head>
+<body>
+    <header>
+        <img src="../img/icons/film.png" alt="logo-cine">
+        <h1>Cineflex</h1>
+    </header>
+
+        <h2>Pago en linea</h2>
+        <div class="containert1">
+          <form action="">
+            <div class="inputBox">
+                <span>Numero tarjeta</span>
+                <input type="text" maxlength="16" class="card-number-input">
+            </div>
+            <div class="inputBox">
+                <span>Nombre propietario</span>
+                <input type="text" maxlength="16" class="card-holder-input">
+            </div>
+           
+            <div class="flexbox">
+                <div class="inputBox">
+                    <span>Mes exp</span>
+                    <select name="" id="" class="mes-input">
+                        <option value="mes" selected disabled>mes</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <span>Año exp</span>
+                    <select name="" id="" class="anio-input">
+                        <option value="mes" selected disabled>año</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <span>cvv</span>
+                    <input type="text" maxlength="4" class="cvv-input">
+                </div>
+            </div>
+                <button id="idBtnCargo" type="button" class="btn btn-primary text-white w-100 mt-4">Enviar</button>
+          </form>
+        </div>
+    
+</body>
+</html>

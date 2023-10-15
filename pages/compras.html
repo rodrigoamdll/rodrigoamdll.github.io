@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"/>
+</head>
+<!-- <body class="bg-dark d-flex justify-content-center align-items-center vh-100" > -->
+<body class="bg-white d-flex justify-content-center align-items-center vh-100">
+    <div class="container-fluid">
+        <div class="row justify-content-md-center">
+          <div class="col-lg-4 justify-content-md-center">
+            <div class="pelicula">
+                <img src="../img/pelicula3_sof.jpg">
+                <p>Sonido de Libertad</p>
+                <a href="#pelicula3">Más información</a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bg-dark p-5 rounded-5 text-secondary mt-5" style="width: 20rem">
+                <div class="text-center fs-1 fw-bold">Boletos</div>
+                <div class="input-group mt-1 m-1">
+                    <select class="selectpicker m-2" data-style="btn-info" style="height: 3rem ; width: 15rem;">
+                        <optgroup label="Fecha">
+                            <option>Seleccione Fecha</option>
+                        </optgroup>
+                    </select>
+                    <select class="selectpicker m-2" data-style="btn-info" style="height: 3rem ; width: 15rem;">
+                        <optgroup label="Sala">
+                            <option>Sala 1</option>
+                            <option>Sala 2</option>
+                            <option>Sala 3</option>
+                        </optgroup>
+                    </select>
+                    <select class="selectpicker m-2" data-style="btn-info" style="height: 3rem ; width: 15rem">
+                        <optgroup label="Formato">
+                            <option>Subtitulada</option>
+                            <option>Doblada Esp</option>
+                        </optgroup>
+                    </select>
+                    <select class="selectpicker m-2" data-style="btn-info" style="height: 3rem ; width: 15rem">
+                        <optgroup label="Hora">
+                            <option>3:45 pm - 6:45 pm</option>
+                            <option>7:00 pm - 9:00 pm</option>
+                            <opt1ion>9:15 pm - 11:15 pm</option>
+                        </optgroup>
+                    </select>
+                    <select class="selectpicker m-2" data-style="btn-info" style="height: 3rem ; width: 15rem">
+                        <optgroup label="Cantidad">
+                            <option>Elija Cantidad</option>
+                            <option>1</option>
+                            <option>2</option>
+                        </optgroup>
+                    </select>
+                    <button id="idBtnComprar" type="button" class="btn btn-primary text-white w-100 mt-4">Comprar Boleto</button>
+                </div>
+            </div>
+         
+        </div>
+    </div>
+    <script src="../js/compras.js" defer></script>
+</body>
+
+</html>
