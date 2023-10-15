@@ -397,3 +397,94 @@ footer {
     }
 }
 
+/* Estilos para la pagina tarjeta*/
+.containert1 {
+    min-height: 100vh;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 0 250px;
+}
+
+.containert1 form{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 20px;
+    width: 500px;
+}
+
+.containert1 form .inputBox{
+    margin-top: 20px;
+}
+
+.containert1 form .inputBox span{
+    display: block;
+    color:#999;
+    padding-bottom: 5px;
+}
+
+.containert1 form .inputBox input,
+.containert1 form .inputBox select{
+    width: 95%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,.3);
+    color:#444;
+}
+
+.containert1 form .inputBoxCvv input{
+    margin-top: 20px;
+    width: 20%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,.3);
+    color:#444;
+}
+
+
+.containert1 form .flexbox {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.containert1 form .flexbox .inputBox{
+    flex: 1 1 150px;
+}
+
+.containert1 form .flexbox span{
+    display: block;
+    color:#999;
+    padding-bottom: 5px;
+}
+
+
+.containert1 form .flexbox select{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,.3);
+    color:#444;
+}
+
+#idBtnCargo{
+    width: 100%;
+    background: navy;
+    margin-top: 20px;
+    color:#fff;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .2s linear;
+    border-radius: 10px;
+}
+
+#idBtnCargo:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
