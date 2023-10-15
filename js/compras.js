@@ -5,13 +5,13 @@ const iniciar = function () {
         comprar.addEventListener(
             "click", 
             function () {
-                location.href = "tarjeta.html";
+                location.href = "../pages/tarjeta.html";
             },
             false
         );
     }   else if (comprar.attachEvent) {
         comprar.attachEvent("onclick", function () {
-            location.href = "tarjeta.html";
+            location.href = "../pages/tarjeta.html";
     });
     }
 }
