@@ -1,7 +1,8 @@
-/* Estilos generales */
 @import url(https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@10..48,200&family=Courgette&family=Dancing+Script:wght@600&family=Passion+One&display=swap);
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -32,368 +33,216 @@ header h1 {
     margin-left: 10px;
 }
 
-nav {
-    width: 100%; /*960/960*=100%*/
-    font-size: 1.2em;
-    padding-top: 10px;
-    background-color:white;
-    height: 35px;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0px 0px 65px 0px;
-    padding: 0; /* Elimina el relleno predeterminado */
-    background-color:white;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-nav ul li {
-    float: left;
-    margin: 0px;
-    background-color: white;
-}
-
-nav ul li a {
+nav ul li .nav-link {
+    font-size: 1.1em;
     text-decoration: none;
     padding: .3em .5em;
     margin: 0em .5em;
     display: block;
     color: navy;
     font-weight: bold;
-    transition: color 1s, transform 1.7s;
+    transition: color 1s, transform 0.7s;
     background-color: white;
 }
 
-nav ul li a:hover {
+nav ul li .nav-link:hover {
     color: navy;
     transform: scale(1.1);
 }
 
-nav ul li a#cartelera1 {
-    background: url(../img/icons/clapperboard.png) no-repeat 0px 3px;
-    padding-left: 40px;
-}
-
-nav ul li a#estrenos1 {
-    background: url(../img/icons/next.png) no-repeat 0px 3px;
-    padding-left: 40px;
-
-}
-
-nav ul li a#promociones1 {
-    background: url(../img/icons/marketing.png) no-repeat 0px 3px;
-    padding-left: 40px;
-}
-
-nav ul li a#usuarios1 {
-    background: url(../img/icons/user.png) no-repeat 0px 3px;
-    padding-left: 40px;
-}
-
-
-section {
-    margin: 20px;
-}
-
-/* Estilos para la sección de cartelera */
-#cartelera {
-    background-color: lavender;
-    align-items: center;
-}
-
-#cartelera h2{
+#cartelera h2, #pelicula_en_cartelera h2, .slide-container h2 {
     font-family: 'Acme', sans-serif;
     font-size: 30px;
     color: navy;
-    
 }
 
-#cartelera .pelicula {
-    border-radius: 15px;
-}
-
-.contenedor-info{
-    padding-left: 7%;
-}
-
-.contenedor-peliculas{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.pelicula {
-    display: inline-block;
-    margin-right: 20px;
-    text-align: center;
-    vertical-align: top;
-    width: 300px; /* Ajusta el ancho según sea necesario */
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    padding: 20px;
-    background-color: white;
-}
-
-.pelicula img {
-    max-width: 100%;
-    height: auto;
-}
-
-.pelicula h3 {
-    margin-top: 0;
-}
-
-iframe {
-    width: 100%;
-    height: 315px;
-}
-
-/* Estilos para la sección de películas en cartelera */
-#pelicula_en_cartelera{
-    display: flex;
-    flex-direction: column;
-}
-
-#pelicula_en_cartelera  h2{
-    font-family: 'Acme', sans-serif;
-    font-size: 30px;
-    color: navy;
-    padding-left: 7%;
-}
-
-.contenedor-peliscart{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.peliculacar {
-    display: inline-block;
-    margin-right: 30px;
-    text-align: center;
-    vertical-align: top;
-    width: 410px; /* Ajusta el ancho según sea necesario */
-    height: 720px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    background-color: white;
-    border-radius: 15px;
-}
-
-.peliculacar h3 {
-    line-height: 0.2; /* Ajusta el valor según tu preferencia para la altura del h3 */
-    margin-top: 10px; /* Añade espacio entre el h3 y el borde superior del contenedor */
-}
-
-.peliculacar p{
-    text-align: justify;
-}
-
-.contenedor-peliscart-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#generos button {
-    margin-top: 10px;
-    border: none;
-    box-sizing: border-box;
+#pelicula_en_cartelera .btn-navy {
     background-color: #091dab;
-    color: #ffffff;
+    color: white;
     font-size: 14px;
-    border-radius: 15px;
-    height: 25px;
+}
+
+#pelicula_en_cartelera .h4 {
+    font-weight: bold;
+}
+
+#cartelera .btn-custom {
+    color: #ffffff;
+    background-color: #087cfc;
+}
+
+#cartelera .btn-custom:hover {
+    background-color: transparent; 
+    border: 2px solid #087cfc; 
+    color: #087cfc; 
+    transition: all 0.3s ease;
+}
+
+#pelicula_en_cartelera .btn-custom {
+    color: #ffffff;
+    background-color: #7c00ba;
+}
+
+#pelicula_en_cartelera .btn-custom:hover {
+    background-color: transparent; 
+    border: 2px solid #7c00ba; 
+    color: #7c00ba; 
+    transition: all 0.3s ease;
 }
 
 .video-thumbnail {
     position: relative;
-    display: inline-block;
 }
 
-.video-thumbnail img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Estilos para el icono de play */
 .play-icon {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 48px;
-    color: #fff;
-    background-color: rgba(131, 125, 125, 0.584);
+    /*color: #7c00ba; /* Cambia el color aquí */
+    /*background-color: transparent; /* Puedes establecer un color de fondo si lo deseas */
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgb(255, 255, 255); /* Sombra azul con transparencia del 50% */
+
 }
 
-.compra {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+.play-icon:hover {
+    box-shadow: 0 0 50px rgb(192, 0, 222); /* Sombra azul con transparencia del 50% */
 
-.boton-redondeado {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: none;
-    border-radius: 20px; 
-    background-color: #7c00ba; 
-    color: #fff; 
-    padding: 10px 20px;
-    cursor: pointer;
-    height: 40px;
-}
-
-.boton-redondeado:hover {
-    background-color: #fff; 
-    color: #7c00ba;
-    border-color: #7c00ba; 
-    border-width: 2px;
-    border-style: solid;
-}
-
-.boton-redondeado:hover img{
-    content: url(../img/icons/grocery-store-active.png);
-}
-.boton-redondeado img {
-    display: block;
-    margin-right: 10px; 
-    width: 24px;
-    height: 24px;
 }
 
 
-/* Estilos para la sección de estrenos*/
-#proximo-estrenos{
-    display: flex;
-    flex-direction: column;
+/*Codigo de prueba*/
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.estrenos-info{
-    padding-left: 7%;
+.slide-container{
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0;
+}
+.slide-content{
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.card{
+  border-radius: 25px;
+  background-color: #FFF;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.image-content,
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.image-content{
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4070F4;
+  border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #4070F4;
+}
+.overlay::after{
+  border-radius: 0 25px 0 0;
+  background-color: #FFF;
+}
+.card-image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #FFF;
+  padding: 3px;
+}
+.card-image .card-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #4070F4;
+}
+.name{
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.description{
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.button{
+  border: none;
+  font-size: 16px;
+  color: #FFF;
+  padding: 8px 16px;
+  background-color: #4070F4;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover{
+  background: #265DF2;
 }
 
-#proximo-estrenos h2{
-    font-family: 'Acme', sans-serif;
-    font-size: 30px;
-    color: navy;
+.swiper-navBtn{
+  color: #6E93f7;
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+  color: #4070F4;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+  font-size: 35px;
+}
+.swiper-button-next{
+  right: 0;
+}
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-pagination-bullet{
+  background-color: #6E93f7;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active{
+  background-color: #4070F4;
 }
 
-#proximo-estrenos .proximo-estrenos{
-    border-radius: 15px;
+@media screen and (max-width: 768px) {
+  .slide-content{
+    margin: 0 10px;
+  }
+  .swiper-navBtn{
+    display: none;
+  }
 }
-
-.contenedor-estrenos{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.proximo-estrenos{
-    display: inline-block;
-    margin-right: 10px;
-    text-align: center;
-    vertical-align: top;
-    width: 250px; /* Ajusta el ancho según sea necesario */
-    height: 550px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    background-color: white;
-}
-
-.proximo-estrenos h4 {
-    background-color: navy;
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-.proximo-estrenos img {
-    max-width: 100%;
-    height: 390px;
-}
-/* Estilos para la sección de dulceria y promociones */
-#bottom-info{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-#promociones h2{
-    font-family: 'Acme', sans-serif;
-    font-size: 30px;
-    color: navy;
-}
-
-
-
-/* Estilos para el pie de página */
-footer {
-    background-color: navy;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.slider-container {
-    width: 700px;
-    overflow: hidden;
-    position: relative;
-}
-
-.slider {
-    display: flex;
-    animation: slide 15s infinite;
-}
-
-.slider img {
-    width: 100%;
-    height: auto;
-}
-
-.slide {
-    flex: 0 0 100%;
-}
-
-@keyframes slide {
-    0%, 100% {
-        transform: translateX(0);
-    }
-    20% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(-100%);
-    }
-    45% {
-        transform: translateX(-100%);
-    }
-    50% {
-        transform: translateX(-200%);
-    }
-    70% {
-        transform: translateX(-200%);
-    }
-    75% {
-        transform: translateX(0);
-    }
-}
-

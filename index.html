@@ -1,303 +1,434 @@
-<!--*Estructura basica de la pagina-->
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <title>Cineflex</title>
-    <link type="text/css" rel="stylesheet" href="css/estilobase.css">
-    <link type="text/css" rel="stylesheet" href="css/estilomovil.css" media="screen and (max-width:539px)">
-    <link type="text/css" rel="stylesheet" href="css/estilotablet.css" media="screen and (min-width:540px) and (max-width:1024px)">
-    <link type="text/css" rel="stylesheet" href="css/estilobase.css" media="screen and (min-width:1025px)">
+    <link rel="stylesheet" href="css/estilobase.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <header>
-        <img src="img/icons/film.png" alt="logo-cine">
-        <h1>Cineflex</h1>
-    </header>
+<body style="background-color: lavender;">
     
-    <nav>
-        <ul>
-            <li><a href="#cartelera" id="cartelera1">Cartelera</a></li>
-            <li><a href="#proximo-estrenos" id="estrenos1">Próximos Estrenos</a></li>
-            <li><a href="#promociones" id="promociones1">Promociones</a></li>
-            <li><a href="pages/login.html" id="usuarios1">Mi cuenta</a></li>
-        </ul>
+    <header class="text-white text-center p-4" style="background-color: navy;">
+        <img src="img/icons/film.png" alt="logo-cine" class="img-fluid" width="64" height="64">
+        <h1 class="display-3">Cineflex</h1>
+    </header>
+
+    <nav class="bg-white navbar navbar-expand-lg navbar-lights">
+        <div class="container">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#cartelera"><i class="fa-solid fa-clapperboard" style="color: #000080;"></i> Cartelera</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#proximo-estrenos"><i class="fa-solid fa-film" style="color: #000080;"></i> Próximos Estrenos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#promociones"><i class="fa-solid fa-gift" style="color: #000080;"></i> Promociones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/login.html"><i class="fa-solid fa-user" style="color: #000080;"></i> Mi cuenta</a>
+                </li>
+            </ul>
+        </div>
     </nav>
     
-    <section id="cartelera">
-        <div class="contenedor-info">
-            <h2>Cartelera</h2>
-            <p>Consulta los horarios de las películas en cartelera:</p>
-        </div>
-
-        <div class="contenedor-peliculas">
-            <!-- Película 1 -->
-            <div class="pelicula">
-                <img src="img/pelicula1_bb.jpg">
-                <p>Blue Beetle</p>
-                <a href="#pelicula1">Más información</a>
+    <section id="cartelera" class="bg-lavender py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center">Cartelera</h2>
+                    <p class="text-center">Consulta los horarios de las películas en cartelera:</p>
+                </div>
             </div>
-
-            <!-- Película 2 -->
-            <div class="pelicula">
-                <img src="img/pelicula2_gt.jpg">
-                <p>Gran Turismo</p>
-                <a href="#pelicula2">Más información</a>
-            </div>        
-
-            <!-- Película 3 -->
-            <div class="pelicula">
-                <img src="img/pelicula3_sof.jpg">
-                <p>Sonido de Libertad</p>
-                <a href="#pelicula3">Más información</a>
-            </div>
-            
-            <!-- Película 4 -->
-            <div class="pelicula">
-                <img src="img/pelicula4.jpg">
-                <p>Megalodon 2</p>
-                <a href="#pelicula4">Más información</a>
+            <div class="row justify-content-center">
+                <!-- Película 1 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <div class="pelicula card shadow">
+                        <img src="img/pelicula1_bb.jpg" class="card-img-top" alt="Blue Beetle">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <h5 class="card-title text-center">Blue Beetle</h5>
+                            <a href="#pelicula1" class="btn btn-custom btn-block rounded-pill">Más información</a>
+                        </div>
+                    </div>
+                </div>
+                
+    
+                <!-- Película 2 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <div class="pelicula card shadow">
+                        <img src="img/pelicula2_gt.jpg" class="card-img-top" alt="Gran Turismo">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <h5 class="card-title text-center">Gran Turismo</h5>
+                            <a href="#pelicula2" class="btn btn-custom btn-block rounded-pill">Más información</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Película 3 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <div class="pelicula card shadow">
+                        <img src="img/pelicula3_sof.jpg" class="card-img-top" alt="Sonido de Libertad">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <h5 class="card-title text-center">Sonido de Libertad</h5>
+                            <a href="#pelicula3" class="btn btn-custom btn-block rounded-pill">Más información</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Película 4 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <div class="pelicula card shadow">
+                        <img src="img/pelicula4.jpg" class="card-img-top" alt="Megalodon 2">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <h5 class="card-title text-center">Megalodon 2</h5>
+                            <a href="#pelicula4" class="btn btn-custom btn-block rounded-pill">Más información</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-   
-
     
     <section id="pelicula_en_cartelera">
-        <h2>Películas en Cartelera</h2>
-        <!-- Para cada película en cartelera, puedes crear un bloque de información -->
-        <div class="contenedor-peliscart">
-            <div class="contenedor-peliscart contenedor-peliscart-row">
-                <div class="peliculacar" id="pelicula1">
-                <h3>Blue Beetle</h3>
-                <div class="video-thumbnail">
-                    <a href="https://www.youtube.com/watch?v=swtFJ2GNzhk" target="_blank">
-                    <div class="play-icon">&#9658;</div> <!-- Icono de play -->
-                    <img src="https://i.ytimg.com/vi/swtFJ2GNzhk/hq720.jpg" alt="Miniatura del Video">
-                    </a>
+        <h2 class="text-center">Películas en Cartelera</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow">
+                        <div class="video-thumbnail position-relative">
+                            <img src="https://i.ytimg.com/vi/swtFJ2GNzhk/hq720.jpg" alt="Miniatura del Video" class="card-img-top">
+                            <a href="https://www.youtube.com/watch?v=swtFJ2GNzhk" target="_blank" class="play-icon">
+                                <i class="fa fa-play-circle fa-4x"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <div class="generos text-center">
+                                <button class="btn btn-navy btn-sm rounded-pill mr-2">Acción</button>
+                                <button class="btn btn-navy btn-sm rounded-pill mr-2">Aventura</button>
+                                <button class="btn btn-navy btn-sm rounded-pill mr-2">Ciencia Ficción</button>
+                                <button class="btn btn-navy btn-sm rounded-pill">Superhéroes</button>
+                            </div>
+                            <br>
+                            <h4 class="card-title">Blue Beetle</h4>
+                            <p class="card-text">Director: Angel Soto</p>
+                            <p class="card-text">Sinopsis: Jaime Reyes, recién graduado de la universidad, busca encontrar su propósito en el mundo...</p>
+                            <p class="card-text">Elenco: Becky, Bruna, Xolo</p>
+                            <p class="card-text">Precio de Entradas: $3.00</p>
+                            <p class="card-text">Horarios: Lunes-Miércoles / 11:00 - 21:00 | Martes-Jueves / 12:00 - 19:00 | Sábado-Domingo / 10:00 - 23:00</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-custom rounded-pill"><i class="fa-solid fa-cart-shopping"></i> Ver horarios disponibles</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div id="generos">
-                    <button> Acción </button>
-                    <button> Aventura </button>
-                    <button> Ciencia Ficción </button>
-                    <button> Superhéroes </button>
+
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow">
+                        <div class="video-thumbnail position-relative">
+                            <img src="https://i.ytimg.com/vi/3JN0efm2nHg/hq720.jpg" alt="Miniatura del Video" class="card-img-top">
+                            <a href="https://www.youtube.com/watch?v=3JN0efm2nHg&t=1s" target="_blank" class="play-icon">
+                                <i class="fa fa-play-circle fa-4x"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <div class="generos text-center">
+                                <button class="btn btn-navy btn-sm rounded-pill mr-2">Deportes</button>
+                                <button class="btn btn-navy btn-sm rounded-pill mr-2">Drama</button>
+                                <button class="btn btn-navy btn-sm rounded-pill mr-2">Acción</button>
+                            </div>
+                            <br>
+                            <h4 class="card-title">Gran Turismo</h4>
+                            <p class="card-text">Director: Neill Blomkamp</p>
+                            <p class="card-text">Sinopsis: Basada en la historia real de Jann Mardenborough, narra como se cumple el deseo mas grande de un adolescente...</p>
+                            <p class="card-text">Elenco: David, Orlando, Archie</p>
+                            <p class="card-text">Precio de Entradas: $3.00</p>
+                            <p class="card-text">Horarios: Lunes-Miercoles / 11:15 - 21:15 | Martes-Jueves / 12:30 - 19:30 | Sábado-Domingo / 10:00 - 23:00</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-custom rounded-pill"><i class="fa-solid fa-cart-shopping"></i> Ver horarios disponibles</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p>Director: Angel Soto</p>
-                <p>Sinopsis: Jaime Reyes, recien graduado de la universidad, busca encontrar su proposito en el mundo, 
-                    el destino interviene cuando Jaime inesperadamente 
-                    se encuentra en posesion de una antigua reliquia de biotecnologia alienegena: el Escarabajo.</p>
-                <p>Elenco: Becky, Bruna, Xolo</p>
-                <p>Precio de Entradas: $3.00</p>
-                <p>Horarios: Lunes-Miercoles / 11:00 - 21:00 | Martes-Jueves / 12:00 - 19:00 | Sábado-Domingo / 10:00 - 23:00</p>
-                <div class="compra">
-                    <button class="boton-redondeado">
-                        <img src="img/icons/grocery-store.png" alt="">
-                        <h4>Ver horarios disponibles</h4>
-                    </button>
+
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow">
+                        <div class="video-thumbnail position-relative">
+                            <img src="https://i.ytimg.com/vi/H82uvLvszQ0/hq720.jpg" alt="Miniatura del Video" class="card-img-top">
+                            <a href="https://www.youtube.com/watch?v=H82uvLvszQ0" target="_blank" class="play-icon">
+                                <i class="fa fa-play-circle fa-4x"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <div class="generos text-center">
+                                <button class="btn btn-navy btn-sm rounded-pill mr-2">Acción</button>
+                            </div>
+                            <br>
+                            <h4 class="card-title">Sonido de Libertad</h4>
+                            <p class="card-text">Director: Alejandro Monteverde</p>
+                            <p class="card-text">Sinopsis: La increible historia real de un ex agente del gobierno de EEUU convertido en justiciero que se embarca...</p>
+                            <p class="card-text">Elenco: Mira, Bill, Jim</p>
+                            <p class="card-text">Precio de Entradas: $3.00</p>
+                            <p class="card-text">Horarios: Lunes-Miercoles / 12:15 - 22:15 | Martes-Jueves / 13:30 - 20:30 | Sábado-Domingo / 11:00 - 23:30</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-custom rounded-pill"><i class="fa-solid fa-cart-shopping"></i> Ver horarios disponibles</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-    
-            <div class="peliculacar" id="pelicula2">
-                <h3>Gran Turismo</h3>
-                <div class="video-thumbnail">
-                    <a href="https://www.youtube.com/watch?v=3JN0efm2nHg&t=1s" target="_blank">
-                    <div class="play-icon">&#9658;</div> <!-- Icono de play -->
-                    <img src="https://i.ytimg.com/vi/3JN0efm2nHg/hq720.jpg" alt="Miniatura del Video">
-                    </a>
+
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow">
+                        <div class="video-thumbnail position-relative">
+                            <img src="https://i.ytimg.com/vi/e6mJF-uDXYE/hq720.jpg" alt="Miniatura del Video" class="card-img-top">
+                            <a href="https://www.youtube.com/watch?v=e6mJF-uDXYE&t=2s" target="_blank" class="play-icon">
+                                <i class="fa fa-play-circle fa-4x"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <div class="generos text-center">
+                                <button class="btn btn-navy btn-sm rounded-pill mr-2">Terror</button>
+                                <button class="btn btn-navy btn-sm rounded-pill mr-2">Ciencia Ficción</button>
+                            </div>
+                            <br>
+                            <h4 class="card-title">Megalodon 2</h4>
+                            <p class="card-text">Director: Ben Wheatley</p>
+                            <p class="card-text">Sinopsis: Un equipo de investigación inicia una misión que va a explorar las profundidades más abismales del mar...</p>
+                            <p class="card-text">Elenco: Jason Statham, Sienna Guillory, Cliff Curtis</p>
+                            <p class="card-text">Precio de Entradas: $3.00</p>
+                            <p class="card-text">Horarios: Lunes-Miercoles / 11:30 - 19:30 | Martes-Jueves / 11:45 - 20:45 | Sábado-Domingo / 11:00 - 23:30</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-custom rounded-pill"><i class="fa-solid fa-cart-shopping"></i> Ver horarios disponibles</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div id="generos">
-                    <button> Deportes </button>
-                    <button> Drama </button>
-                    <button> Acción </button>
+
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow">
+                        <div class="video-thumbnail position-relative">
+                            <img src="https://i.ytimg.com/vi/KudedLV0tP0/hq720.jpg" alt="Miniatura del Video" class="card-img-top">
+                            <a href="https://www.youtube.com/watch?v=KudedLV0tP0" target="_blank" class="play-icon">
+                                <i class="fa fa-play-circle fa-4x"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <div class="generos text-center">
+                                <button class="btn btn-navy btn-sm rounded-pill mr-2">Musical</button>
+                            </div>
+                            <br>
+                            <h4 class="card-title">Taylor Swift The Eras Tour</h4>
+                            <p class="card-text">Director: Sam Wrench</p>
+                            <p class="card-text">Sinopsis: ¡El fenómeno cultural continúa en la pantalla grande! Sumérgete en esta experiencia cinematográfica...</p>
+                            <p class="card-text">Elenco: Taylor Swift</p>
+                            <p class="card-text">Precio de Entradas: $4.00</p>
+                            <p class="card-text">Horarios: Lunes-Miercoles / 11:30 - 19:30 | Martes-Jueves / 11:45 - 20:45 | Sábado-Domingo / 11:00 - 23:30</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-custom rounded-pill"><i class="fa-solid fa-cart-shopping"></i> Ver horarios disponibles</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p>Director: Neill Blomkamp</p>
-                <p>Sinopsis: Basada en la historia real de Jann Mardenborough, narra como se cumple el deseo mas grande de un adolescente 
-                    jugador de Gran Turismo cuyas habilidades hacen que gane una serie de competencias de Nissan para convertirse en un 
-                    verdadero piloto.</p>
-                <p>Elenco: David, Orlando, Archie</p>
-                <p>Precio de Entradas: $3.00</p>
-                <p>Horarios: Lunes-Miercoles / 11:15 - 21:15 | Martes-Jueves / 12:30 - 19:30 | Sábado-Domingo / 10:00 - 23:00</p>
-                <div class="compra">
-                    <button class="boton-redondeado">
-                        <img src="img/icons/grocery-store.png" alt="">
-                        <h4>Ver horarios disponibles</h4>
-                    </button>
+
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow">
+                        <div class="video-thumbnail position-relative">
+                            <img src="https://i.ytimg.com/vi/keW_fKq187k/hq720.jpg" alt="Miniatura del Video" class="card-img-top">
+                            <a href="https://www.youtube.com/watch?v=keW_fKq187k" target="_blank" class="play-icon">
+                                <i class="fa fa-play-circle fa-4x"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <div class="generos text-center">
+                                <button class="btn btn-navy btn-sm rounded-pill mr-2">Terror</button>
+                                <button class="btn btn-navy btn-sm rounded-pill mr-2">Fantasía</button>
+                            </div>
+                            <br>
+                            <h4 class="card-title">Evil Dead El Despertar</h4>
+                            <p class="card-text">Director: Lee Cronin</p>
+                            <p class="card-text">Sinopsis: En un edificio de apartamentos de Los Ángeles, dos hermanas luchan contra los demonios sedientos de sangre...</p>
+                            <p class="card-text">Elenco: Moran Davles, Alyssa Sutherland, Lily Sullivan</p>
+                            <p class="card-text">Precio de Entradas: $3.00</p>
+                            <p class="card-text">Horarios: Lunes-Miercoles / 11:30 - 19:30 | Martes-Jueves / 11:45 - 20:45 | Sábado-Domingo / 11:00 - 23:30</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-custom rounded-pill"><i class="fa-solid fa-cart-shopping"></i> Ver horarios disponibles</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-    
-            <div class="peliculacar" id="pelicula3">
-                <h3>Sonido de Libertad</h3>
-                <div class="video-thumbnail">
-                    <a href="https://www.youtube.com/watch?v=H82uvLvszQ0" target="_blank">
-                    <div class="play-icon">&#9658;</div> <!-- Icono de play -->
-                    <img src="https://i.ytimg.com/vi/H82uvLvszQ0/hq720.jpg" alt="Miniatura del Video">
-                    </a>
-                </div>
-                <div id="generos">
-                    <button> Acción </button>
-                </div>
-                <p>Director: Alejandro Monteverde</p>
-                <p>Sinopsis: La increible historia real de un ex agente del gobierno de EEUU convertido en justiciero que se embarca 
-                    en una peligrosa mision para rescatar a cientos de ninios de los traficantes sexuales.es una película dramática 
-                    estadounidense de 2023, dirigida por Alejandro Monteverde.</p>
-                <p>Elenco: Mira, Bill, Jim</p>
-                <p>Precio de Entradas: $3.00</p>
-                <p>Horarios: Lunes-Miercoles / 12:15 - 22:15 | Martes-Jueves / 13:30 - 20:30 | Sábado-Domingo / 11:00 - 23:30</p>
-                <div class="compra">
-                    <button class="boton-redondeado">
-                        <img src="img/icons/grocery-store.png" alt="">
-                        <h4>Ver horarios disponibles</h4>
-                    </button>
-                </div>
-            </div>
-    
-            <div class="peliculacar" id="pelicula4">
-                <h3>Megalodon 2</h3>
-                <div class="video-thumbnail">
-                    <a href="https://www.youtube.com/watch?v=e6mJF-uDXYE&t=2s" target="_blank">
-                    <div class="play-icon">&#9658;</div> <!-- Icono de play -->
-                    <img src="https://i.ytimg.com/vi/e6mJF-uDXYE/hq720.jpg" alt="Miniatura del Video">
-                    </a>
-                </div>
-                <div id="generos">
-                    <button> Terror </button>
-                    <button> Ciencia Ficción </button>
-                </div>
-                <p>Director: Ben Wheatley</p>
-                <p>Sinopsis: Un equipo de investigación inicia una misión que va a explorar las profundidades más abismales del mar
-                    . Enfrentados a colosales Megalodones y a implacables saqueadores 
-                    medioambientales, nuestros héroes deben correr más rápido, ser más astutos y nadar a mayor velocidad que sus despiadados 
-                    depredadores.</p>
-                <p>Elenco: Jason Statham, Sienna Guillory, Cliff Curtis</p>
-                <p>Precio de Entradas: $3.00</p>
-                <p>Horarios: Lunes-Miercoles / 11:30 - 19:30 | Martes-Jueves / 11:45 - 20:45 | Sábado-Domingo / 11:00 - 23:30</p>
-                <div class="compra">
-                    <button class="boton-redondeado">
-                        <img src="img/icons/grocery-store.png" alt="">
-                        <h4>Ver horarios disponibles</h4>
-                    </button>
-                </div>
+
+            <div class="row">
             </div>
 
-            <div class="peliculacar" id="pelicula5">
-                <h3>Taylor Swift The Eras Tour</h3>
-                <div class="video-thumbnail">
-                    <a href="https://www.youtube.com/watch?v=KudedLV0tP0" target="_blank">
-                    <div class="play-icon">&#9658;</div> <!-- Icono de play -->
-                    <img src="https://i.ytimg.com/vi/KudedLV0tP0/hq720.jpg" alt="Miniatura del Video">
-                    </a>
-                </div>
-                <div id="generos">
-                    <button> Musical </button>
-                </div>
-                <p>Director: Sam Wrench</p>
-                <p>Sinopsis: ¡El fenómeno cultural continúa en la pantalla grande! Sumérgete en esta experiencia 
-                    cinematográfica de este concierto único en la vida. Podrás disfrutarlo con una vista impresionante 
-                    de la gira histórica desde la pantalla grande. ¡Se recomienda usar la vestimenta de Taylor Swift Eras 
-                    y tus friendship bracelets!</p>
-                <p>Elenco: Taylor Swift</p>
-                <p>Precio de Entradas: $4.00</p>
-                <p>Horarios: Lunes-Miercoles / 11:30 - 19:30 | Martes-Jueves / 11:45 - 20:45 | Sábado-Domingo / 11:00 - 23:30</p>
-                <div class="compra">
-                    <button class="boton-redondeado">
-                        <img src="img/icons/grocery-store.png" alt="">
-                        <h4>Ver horarios disponibles</h4>
-                    </button>
-                </div>
-            </div>
-
-            <div class="peliculacar" id="pelicula6">
-                <h3>Evil Dead El Despertar</h3>
-                <div class="video-thumbnail">
-                    <a href="https://www.youtube.com/watch?v=keW_fKq187k" target="_blank">
-                    <div class="play-icon">&#9658;</div> <!-- Icono de play -->
-                    <img src="https://i.ytimg.com/vi/keW_fKq187k/hq720.jpg" alt="Miniatura del Video">
-                    </a>
-                </div>
-                <div id="generos">
-                    <button> Terror </button>
-                    <button> Fantasía </button>
-                </div>
-                <p>Director: Lee Cronin</p>
-                <p>Sinopsis: En un edificio de apartamentos de Los Ángeles, dos hermanas luchan contra los demonios sedientos 
-                    de sangre que han salido de un libro antiguo. La trama de la película sigue a dos distanciadas hermanas que
-                     tras haberse reunido se ven obligadas a confrontar a entidades demoniacas conocidas como Deadites.</p>
-                <p>Elenco: Moran Davles, Alyssa Sutherland, Lily Sullivan</p>
-                <p>Precio de Entradas: $3.00</p>
-                <p>Horarios: Lunes-Miercoles / 11:30 - 19:30 | Martes-Jueves / 11:45 - 20:45 | Sábado-Domingo / 11:00 - 23:30</p>
-                <div class="compra">
-                    <button class="boton-redondeado">
-                        <img src="img/icons/grocery-store.png" alt="">
-                        <h4>Ver horarios disponibles</h4>
-                    </button>
-                </div>
-            </div>
-
-
-            </div>
+                <!-- Repite el bloque de información para otras películas aquí -->
             </div>
         </div>
     </section>
-    
-    <section id="proximo-estrenos">
-        <div class="estrenos-info">
-            <h2>Próximos Estrenos</h2>
-        </div>
+ 
+    <!-- Resto de tu contenido, contenido de prueba... -->
 
-        <div class="contenedor-estrenos">
-            <div class="proximo-estrenos">
-                <img src="img/estreno.jpg">
-                <h4>Estreno</h4>
-                <p>Saw X</p>
-                <p>Fecha de estreno: 28 sep 2023</p>
-            </div>
-    
-            <div class="proximo-estrenos">
-                <img src="img/peliculaprox2_pptmm.jpg">
-                <h4>Estreno</h4>
-                <p>Paw Patrol The Mighty Movie</p>
-                <p>Fecha de estreno: 29 sep 2023</p>
-            </div>
-    
-            <div class="proximo-estrenos">
-                <img src="img/peliculaprox3_cev.jpg">
-                <h4>Estreno</h4>
-                <p>Cacería en Venecia</p>
-                <p>Fecha de estreno: 14 sep 2023</p>
-            </div>
-    
-            <div class="proximo-estrenos">
-                <img src="img/peliculaprox4_aps.jpg">
-                <h4>Estreno</h4>
-                <p>After para siempre</p>
-                <p>Fecha de estreno: 14 sep 2023</p>
-            </div>
-    
-            <div class="proximo-estrenos">
-                <img src="img/peliculaprox5_cr.jpg">
-                <h4>Estreno</h4>
-                <p>Contrarreloj</p>
-                <p>Fecha de estreno: 14 sep 2023</p>
-            </div>
-        </div>
-    </section>
+    <div class="slide-container swiper" style="background-color: lavender;">
+        <h2 class="text-center">Próximos Estrenos</h2>
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
 
-    <div id="bottom-info">
-        <section id="promociones">
-            <h2>Promociones Y Dulcería</h2>
-            <div class="slider-container">
-                <div class="slider">
-                    <div class="slide"><img src="img/img_promo1.jpg" alt="Imagen 1"></div>
-                    <div class="slide"><img src="img/img_dulce1.jpg" alt="Imagen 2"></div>
-                    <div class="slide"><img src="img/img_promo2.jpg" alt="Imagen 3"></div>
+                        <div class="card-image">
+                            <img src="img/estreno.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">David Dell</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                        <button class="button">View More</button>
+                    </div>
                 </div>
-        </section>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <img src="img/peliculaprox2_pptmm.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">David Dell</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <img src="img/peliculaprox3_cev.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">David Dell</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <img src="img/peliculaprox4_aps.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">David Dell</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <img src="img/peliculaprox5_cr.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">David Dell</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <!--<img src="images/profile6.jpg" alt="" class="card-img">-->
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">David Dell</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <!--<img src="images/profile7.jpg" alt="" class="card-img">-->
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">David Dell</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <!--<img src="images/profile8.jpg" alt="" class="card-img">-->
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">David Dell</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <!--<img src="images/profile9.jpg" alt="" class="card-img">-->
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">David Dell</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                        <button class="button">View More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
     </div>
-    
-    <footer>
-        <p>&copy; 2023 Cineflex</p>
-    </footer>
-</body>
-</html>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</html>
