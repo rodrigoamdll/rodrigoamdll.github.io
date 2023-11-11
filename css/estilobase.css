@@ -50,7 +50,7 @@ nav ul li .nav-link:hover {
     transform: scale(1.1);
 }
 
-#cartelera h2, #pelicula_en_cartelera h2, .slide-container h2, .text_align_center h2 {
+#cartelera h2, #pelicula_en_cartelera h2, .slide-container h2, .text_align_center h2, #bottominfo h2 {
     font-family: 'Acme', sans-serif;
     font-size: 30px;
     color: navy;
@@ -197,4 +197,42 @@ nav ul li .nav-link:hover {
   background: #7c00ba;
   width: 15px;
   height: 15px;
+}
+
+.pics {
+  width: 700px;
+  height: 500px;
+}
+
+.carousel-inner {
+  position: relative;
+  left: 30vw;
+  top: 10vh;
+}
+
+.carousel-control-next-icon{
+  position: relative;
+  left: 30vw;
+  top: 7vh;
+}
+
+.carousel-control-prev-icon{
+  position: relative;
+  right: 24vw;
+  top: 7vh;
+}
+
+/* Estilos para el pie de página */
+footer {
+  background-color: navy;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+@media (max-width: 480px) {
+  .swiper-container .swiper-button-next,
+  .swiper-container .swiper-button-prev {
+      display: none;
+  }
 }
