@@ -245,11 +245,3 @@ main {
   padding: 20px 0;
 }
 
-section {
-  min-width: 300px;
-  max-width: 400px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #fff; /* Fondo blanco para los sections */
-}
