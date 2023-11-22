@@ -1,0 +1,60 @@
+@import url(https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@10..48,200&family=Courgette&family=Dancing+Script:wght@600&family=Passion+One&display=swap);
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Color de fondo para mostrar el área del contenido */
+}
+
+header, footer {
+    width: 100%;
+    background-color: navy;
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+section {
+    min-width: 300px;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff; /* Fondo blanco para los sections */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
+header h1 {
+    font-family: 'Acme', sans-serif;
+    font-size: 50px;
+    margin-left: 10px;
+}

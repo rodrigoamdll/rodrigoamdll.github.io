@@ -50,7 +50,7 @@ nav ul li .nav-link:hover {
     transform: scale(1.1);
 }
 
-#cartelera h2, #pelicula_en_cartelera h2, .slide-container h2, .text_align_center h2, #bottominfo h2 {
+#cartelera h2, #pelicula_en_cartelera h2, .slide-container h2, .text_align_center h2, #bottominfo h2, #promociones h2 {
     font-family: 'Acme', sans-serif;
     font-size: 30px;
     color: navy;
@@ -163,6 +163,7 @@ nav ul li .nav-link:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 .swiper-container .swiper-button-next,
 .swiper-container .swiper-button-prev {
@@ -228,6 +229,89 @@ footer {
   color: white;
   text-align: center;
   padding: 10px 0;
+}
+
+#promociones .top-categories {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-bottom: 3rem;
+}
+
+#promociones .container-categories {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3rem;
+}
+
+#promociones .card-category {
+	height: 20rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 2rem;
+	gap: 2rem;
+}
+
+#promociones .promo1 {
+	background-image: linear-gradient(#0c338980, #23022680),
+		url(../img/img_dulce1.jpg);
+	background-size: cover;
+  height: 300px;
+  border-radius: 25px;
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+#promociones .promo2 {
+	background-image: linear-gradient(#0c338980, #23022680),
+		url(../img/img_promo1.jpg);
+	background-size: cover;
+  height: 300px;
+  border-radius: 25px;
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+#promociones .promo3 {
+	background-image: linear-gradient(#0c338980, #23022680),
+		url(../img/img_promo2.jpg);
+	background-size: cover;
+  height: 300px;
+  border-radius: 25px;
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+
+#promociones .card h5 {
+	font-size: 2.5rem;
+  text-align: center;
+  padding-top: 30%;
+	color: #fff;
+	position: relative;
+}
+
+#promociones .card-category p::after {
+	content: '';
+	width: 2.5rem;
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+	bottom: -1rem;
+	left: 50%;
+	transform: translate(-50%, 50%);
+}
+
+#promociones .card-category span {
+	font-size: 1.6rem;
+	color: #fff;
+	cursor: pointer;
+}
+
+#promociones .card-category span:hover {
+	color: var(--primary-color);
 }
 
 @media (max-width: 480px) {

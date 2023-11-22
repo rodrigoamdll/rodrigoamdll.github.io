@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="..//css/dashboard.css">
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="bg-white col-auto  col-md-4 col-lg-2 min-vh-100 d-flex flex-column justify-content-between">
+                <div class="sidebar bg-white p-2">
+                    <a class="d-flex text-decoration-none align-items-center">
+                        <div class="image-text" id="hero">
+                            <span class="image" id="imageText">
+                                <img src="../img/icons/film2.png" style="    width: 40px;
+                                border-radius: 6px;" id="imageText">
+                            </span>
+            
+                            <div class="text logo-text">
+                                <span class="name">Cineflex</span>
+                                <span class="profession">Administración</span>
+                            </div>
+                        </div>
+                    </a>
+                    <ul class="nav nav-pills flex-column mt-4 justify-content-between pt-5">
+                        <li class="nav-item py-2 py-sm-0 mb-4">
+                            <a href="../pages/dashboard.html" class="nav-link text-white">
+                                <i class="fa-solid fa-circle-plus" style="color: #707070;"></i><span class="text ms-3 d-none d-sm-inline">Agregar Pelicula</span>
+                            </a>
+                        </li>
+                        <li class="nav-item py-2 py-sm-0 mb-4">
+                            <a href="../pages/dashedit.html" class="nav-link text-white"  style="background-color: navy;">
+                                <i class="fa-solid fa-pen-to-square"></i><span class="text ms-3 d-none d-sm-inline text-white">Editar Pelicula</span>
+                            </a>
+                        </li>
+                        <li class="nav-item py-2 py-sm-0 mb-4">
+                            <a href="../pages/dashdelete.html" class="nav-link text-white">
+                                <i class="fa-solid fa-trash-can" style="color: #707070;"></i></i><span class="text ms-3 d-none d-sm-inline">Eliminar Pelicula</span>
+                            </a>
+                        </li>
+                        <li class="nav-item py-2 py-sm-0 mb-4">
+                            <a href="../pages/dashusuarios.html" class="nav-link text-white">
+                                <i class="fa-solid fa-user-group" style="color: #707070;"></i></i><span class="text ms-3 d-none d-sm-inline">Usuarios</span>
+                            </a>
+                        </li>
+                        <li class="nav-item py-2 py-sm-0 mb-4">
+                            <a href="#" class="nav-link text-white">
+                                <i class="fa-solid fa-wallet" style="color: #707070;"></i><span class="text ms-3 d-none d-sm-inline">Finanzas</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown-open p-3">
+                    <ul class="nav nav-pills flex-column mt-4 justify-content-between pt-5">
+                        <li class="nav-item py-2 py-sm-0 mb-4">
+                            <a href="#" class="nav-link text-white">
+                                <i class="fa-solid fa-right-from-bracket" style="color: #707070;"></i><span class="text ms-3 d-none d-sm-inline">Cerrar sesion</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container pt-3 col-lg-6 col-md-4 col-sm-12">
+                <div class="rounded shadow p-4 bg-white">
+                    <h2 class="text-center mb-4">Editar Película</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="editar_titulo">Título de la Película a Editar:</label>
+                            <input type="text" id="editar_titulo" name="editar_titulo" class="form-control">
+                        </div>
+                        <br>
+                        <!-- Campos para la edición de información existente -->
+                        <div class="form-group">
+                            <label for="nuevo_titulo">Nuevo Título:</label>
+                            <input type="text" id="nuevo_titulo" name="nuevo_titulo" class="form-control">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="nueva_descripcion">Nueva Descripción:</label>
+                            <textarea id="nueva_descripcion" name="nueva_descripcion" class="form-control"></textarea>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="nuevos_horarios">Nuevos Horarios:</label>
+                            <input type="text" id="nuevos_horarios" name="nuevos_horarios" class="form-control">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="nuevo_precio">Nuevo Precio:</label>
+                            <input type="number" id="nuevo_precio" name="nuevo_precio" class="form-control">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="nueva_imagen">Nueva Imagen promocional:</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="file" id="nueva_imagen" name="nueva_imagen" class="form-control-file">
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-success btn-block">Guardar Cambios</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
