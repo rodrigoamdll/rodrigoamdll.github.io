@@ -5,16 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const formEliminar = document.getElementById("formEliminar");
     const formUsuario = document.getElementById("formUsuario");
     
-    
-
-
 
     // Inicialmente ocultamos el formulario de editar
     formEditar.style.display = "none";
     formEliminar.style.display = "none";
     formUsuario.style.display = "none";
-
-
 
     // Agregamos un evento de clic al enlace de "Editar Película"
     document.getElementById("editLink").addEventListener("click", function () {
@@ -65,5 +60,70 @@ document.getElementById('cerrarSesionLink').addEventListener('click', function (
     }
     // Si el usuario hace clic en "Cancelar", no hace nada
     // Puedes agregar más lógica aquí si es necesario
+
+
 });
+
+//Validaciones agregar pelicula
+    document.getElementById('formAgregar').addEventListener('submit', function (event) {
+            var titulo = document.getElementById('titulo').value.trim();
+            var descripcion = document.getElementById('descripcion').value.trim();
+            var horarios = document.getElementById('horarios').value.trim();
+            var precio = document.getElementById('precio').value.trim();
+            var imagen = document.getElementById('imagen').value.trim();
+
+            if (titulo === '' || descripcion === '' || horarios === '' || precio === '' || imagen === '') {
+                alert('Todos los campos son obligatorios. Por favor, completa el formulario.');
+                event.preventDefault();
+            }
+        });
+
+        //Editar pelicula
+        document.getElementById('formEditar').addEventListener('submit', function (event) {
+            var nuevo_titulo = document.getElementById('nuevo_titulo').value.trim();
+            var nueva_descripcion = document.getElementById('nueva_descripcion').value.trim();
+            var nuevos_horarios = document.getElementById('nuevos_horarios').value.trim();
+            var nuevo_precio = document.getElementById('nuevo_precio').value.trim();
+            var nueva_imagen = document.getElementById('nueva_imagen').value.trim();
+
+            if (nuevo_titulo === '' || nueva_descripcion === '' || nuevos_horarios === '' || nuevo_precio === '' || nueva_imagen === '') {
+                alert('Todos los campos son obligatorios. Por favor, completa el formulario.');
+                event.preventDefault();
+            }
+        });
+
+        //Eliminar pelicula
+        document.getElementById('formEliminar').addEventListener('submit', function (event) {
+            var seleccionar_pelicula = document.getElementById('seleccionar_pelicula').value;
+
+            if (seleccionar_pelicula === '') {
+                alert('Por favor, selecciona una película.');
+                event.preventDefault();
+            }
+        });
+
+        //Agregar usuario
+        document.getElementById('formUsuario').addEventListener('submit', function (event) {
+            var nombre = document.getElementById('nombre').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var password = document.getElementById('password').value.trim();
+
+            if (nombre === '' || email === '' || password === '') {
+                alert('Todos los campos son obligatorios. Por favor, completa el formulario.');
+                event.preventDefault();
+            }
+        });
+
+        // Manejar clic en el botón "Editar Usuario"
+    document.getElementById('editarUsuario').addEventListener('click', function () {
+        // Lógica para editar el usuario (puedes implementar tu lógica aquí)
+        alert('Editar usuario');
+    });
+
+    // Manejar clic en el botón "Eliminar Usuario"
+    document.getElementById('eliminarUsuario').addEventListener('click', function () {
+        // Lógica para eliminar el usuario (puedes implementar tu lógica aquí)
+        alert('Eliminar usuario');
+    });
 });
+
