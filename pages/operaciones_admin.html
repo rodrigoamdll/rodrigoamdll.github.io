@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Panel de Administrador - Cineflex</title>
+    <link rel="stylesheet" href="../css/estilobase.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<header>
+    <h1>Panel de Administrador - Cine Local</h1>
+</header>
+
+<main>
+    <section id="agregar_pelicula">
+        <h2>Agregar Película a Cartelera</h2>
+        <!-- Formulario para agregar una película -->
+        <form>
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo"><br><br>
+
+            <label for="descripcion">Descripción:</label><br>
+            <textarea id="descripcion" name="descripcion"></textarea><br><br>
+
+            <label for="horarios">Horarios:</label>
+            <input type="text" id="horarios" name="horarios"><br><br>
+
+            <label for="precio">Precio:</label>
+            <input type="text" id="precio" name="precio"><br><br>
+
+            <label for="imagen">Imagen promocional:</label>
+            <input type="file" id="imagen" name="imagen"><br><br> 
+
+            <input type="submit" value="Agregar Película">
+        </form>
+    </section>
+
+    <section id="editar_pelicula">
+        <h2>Editar Película</h2>
+        <form>
+            <label for="editar_titulo">Título de la Película a Editar:</label>
+            <input type="text" id="editar_titulo" name="editar_titulo"><br><br>
+    
+            <!-- Campos para la edición de información existente -->
+            <label for="nuevo_titulo">Nuevo Título:</label>
+            <input type="text" id="nuevo_titulo" name="nuevo_titulo"><br><br>
+    
+            <label for="nueva_descripcion">Nueva Descripción:</label><br>
+            <textarea id="nueva_descripcion" name="nueva_descripcion"></textarea><br><br>
+    
+            <label for="nuevos_horarios">Nuevos Horarios:</label>
+            <input type="text" id="nuevos_horarios" name="nuevos_horarios"><br><br>
+    
+            <label for="nuevo_precio">Nuevo Precio:</label>
+            <input type="text" id="nuevo_precio" name="nuevo_precio"><br><br>
+    
+            <label for="nueva_imagen">Nueva Imagen promocional:</label>
+            <input type="file" id="nueva_imagen" name="nueva_imagen"><br><br>
+    
+            <input type="submit" value="Guardar Cambios">
+        </form>
+    </section>
+
+    <section id="eliminar_pelicula" >
+        <h2>Eliminar Película</h2>
+        <form>
+            <label for="seleccionar_pelicula">Seleccione la película a eliminar:</label>
+            <select id="seleccionar_pelicula" name="seleccionar_pelicula">
+                <option value="pelicula1">Nombre Película 1</option>
+                <option value="pelicula2">Nombre Película 2</option>
+                <option value="pelicula3">Nombre Película 3</option>
+                <!-- Opciones para cada película existente -->
+            </select><br><br>
+    
+            <input type="submit" value="Eliminar Película">
+        </form>
+    </section>
+    
+    <section id="gestionar_precios">
+        <h2>Gestionar Precios</h2>
+    
+        <form>
+            <h3>Precios Actuales:</h3>
+            <ul>
+                <li>Precio Entrada General: $10</li>
+                <li>Precio Entrada Estudiantes: $8</li>
+                <li>Precio Entrada VIP: $15</li>
+                <!-- Ejemplos de precios actuales, podrían ser otros -->
+            </ul>
+    
+            <h3>Actualizar Precios:</h3>
+            <label for="entrada_general">Entrada General:</label>
+            <input type="number" id="entrada_general" name="entrada_general" min="0" step="any"><br><br>
+    
+            <label for="entrada_estudiantes">Entrada Estudiantes:</label>
+            <input type="number" id="entrada_estudiantes" name="entrada_estudiantes" min="0" step="any"><br><br>
+    
+            <label for="entrada_vip">Entrada VIP:</label>
+            <input type="number" id="entrada_vip" name="entrada_vip" min="0" step="any"><br><br>
+    
+            <input type="submit" value="Guardar Cambios">
+        </form>
+    </section>
+    
+    <section id="gestionar_horarios">
+        <h2>Gestionar Horarios</h2>
+    
+        <form>
+            <h3>Horarios Actuales:</h3>
+            <ul>
+                <li>Horario Película A: Lunes 15:00 - 17:00</li>
+                <li>Horario Película B: Martes 18:30 - 20:30</li>
+                <li>Horario Película C: Miércoles 13:00 - 15:00</li>
+                <!-- Ejemplos de horarios actuales, podrían ser otros -->
+            </ul>
+    
+            <h3>Actualizar Horarios:</h3>
+            <label for="nombre_pelicula">Nombre de la Película:</label>
+            <input type="text" id="nombre_pelicula" name="nombre_pelicula"><br><br>
+    
+            <label for="dia_semana">Día de la Semana:</label>
+            <input type="text" id="dia_semana" name="dia_semana"><br><br>
+    
+            <label for="hora_inicio">Hora de Inicio:</label>
+            <input type="time" id="hora_inicio" name="hora_inicio"><br><br>
+    
+            <label for="hora_fin">Hora de Fin:</label>
+            <input type="time" id="hora_fin" name="hora_fin"><br><br>
+    
+            <input type="submit" value="Guardar Cambios">
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2023 Cineflex</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
